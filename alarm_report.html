@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>BROAN Alarms Analysis Report</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 text-gray-800 p-6">
+
+    <header class="bg-blue-900 text-white p-5 rounded mb-8 shadow">
+        <h1 class="text-2xl font-bold">🚨 BROAN Alarms Analysis Report</h1>
+    </header>
+
+    <!-- Summary Metrics -->
+    <section class="mb-10">
+        <h2 class="text-xl font-semibold text-blue-700 mb-4">📊 Summary Metrics</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
+            
+            <div class="bg-white shadow rounded p-4 text-center">
+                <div class="text-gray-500 text-sm">Total Alarms</div>
+                <div class="text-xl font-bold mt-1">10328</div>
+            </div>
+            
+            <div class="bg-white shadow rounded p-4 text-center">
+                <div class="text-gray-500 text-sm">Total Duration (Mins)</div>
+                <div class="text-xl font-bold mt-1">195401.2</div>
+            </div>
+            
+            <div class="bg-white shadow rounded p-4 text-center">
+                <div class="text-gray-500 text-sm">Avg Duration (Mins)</div>
+                <div class="text-xl font-bold mt-1">18.9</div>
+            </div>
+            
+            <div class="bg-white shadow rounded p-4 text-center">
+                <div class="text-gray-500 text-sm">Median Duration</div>
+                <div class="text-xl font-bold mt-1">0.2</div>
+            </div>
+            
+            <div class="bg-white shadow rounded p-4 text-center">
+                <div class="text-gray-500 text-sm">Longest Alarm (Mins)</div>
+                <div class="text-xl font-bold mt-1">7027.5 Mins (Line M-Can Housing)</div>
+            </div>
+            
+        </div>
+    </section>
+
+    <!-- Dashboard Chart -->
+    <section class="mb-10">
+        <h2 class="text-xl font-semibold text-blue-700 mb-4">📈 Alarm Visual Dashboard</h2>
+        <img src="broan_alarms_dashboard.png" alt="Alarms Dashboard" class="w-full rounded shadow">
+    </section>
+
+    <!-- Line-wise Alarm Summary & Priority Breakdown -->
+    <section class="mb-10">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+            <div>
+                <h2 class="text-lg font-semibold text-blue-700 mb-2">🏭 Line-wise Alarm Summary</h2>
+                <div class="overflow-x-auto bg-white rounded shadow">
+                    <table class="min-w-full text-sm text-left">
+                        <thead class="bg-blue-800 text-white">
+                            <tr>
+                                <th class="p-2">Line</th>
+                                <th class="p-2">Alarm Count</th>
+                                <th class="p-2">Total Duration</th>
+                                <th class="p-2">Avg Duration</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            
+                            <tr class="border-b hover:bg-gray-50">
+                                <td class="p-2">AutoHood Assembly</td>
+                                <td class="p-2">3319</td>
+                                <td class="p-2">32628.78</td>
+                                <td class="p-2">9.83</td>
+                            </tr>
+                            
+                            <tr class="border-b hover:bg-gray-50">
+                                <td class="p-2">AutoHood Fab</td>
+                                <td class="p-2">1006</td>
+                                <td class="p-2">2084.09</td>
+                                <td class="p-2">2.07</td>
+                            </tr>
+                            
+                            <tr class="border-b hover:bg-gray-50">
+                                <td class="p-2">AutoHood Paint</td>
+                                <td class="p-2">117</td>
+                                <td class="p-2">23755.3</td>
+                                <td class="p-2">203.04</td>
+                            </tr>
+                            
+                            <tr class="border-b hover:bg-gray-50">
+                                <td class="p-2">Evolve South</td>
+                                <td class="p-2">4527</td>
+                                <td class="p-2">15747.5</td>
+                                <td class="p-2">3.48</td>
+                            </tr>
+                            
+                            <tr class="border-b hover:bg-gray-50">
+                                <td class="p-2">M-Can Housing</td>
+                                <td class="p-2">261</td>
+                                <td class="p-2">39323.34</td>
+                                <td class="p-2">150.66</td>
+                            </tr>
+                            
+                            <tr class="border-b hover:bg-gray-50">
+                                <td class="p-2">M-Can North</td>
+                                <td class="p-2">1098</td>
+                                <td class="p-2">81862.21</td>
+                                <td class="p-2">74.56</td>
+                            </tr>
+                            
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div>
+                <h2 class="text-lg font-semibold text-blue-700 mb-2">⚡ Priority Breakdown</h2>
+                <div class="overflow-x-auto bg-white rounded shadow">
+                    <table class="min-w-full text-sm text-left">
+                        <thead class="bg-blue-100 text-blue-800">
+                            <tr>
+                                <th class="p-2">Priority</th>
+                                <th class="p-2">Alarm Count</th>
+                                <th class="p-2">Total Duration</th>
+                                <th class="p-2">Avg Duration</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            
+                            <tr class="border-b hover:bg-gray-50">
+                                <td class="p-2">0</td>
+                                <td class="p-2">17</td>
+                                <td class="p-2">65.45</td>
+                                <td class="p-2">3.85</td>
+                            </tr>
+                            
+                            <tr class="border-b hover:bg-gray-50">
+                                <td class="p-2">1</td>
+                                <td class="p-2">1315</td>
+                                <td class="p-2">14201.51</td>
+                                <td class="p-2">10.8</td>
+                            </tr>
+                            
+                            <tr class="border-b hover:bg-gray-50">
+                                <td class="p-2">2</td>
+                                <td class="p-2">2423</td>
+                                <td class="p-2">9588.58</td>
+                                <td class="p-2">3.96</td>
+                            </tr>
+                            
+                            <tr class="border-b hover:bg-gray-50">
+                                <td class="p-2">3</td>
+                                <td class="p-2">3336</td>
+                                <td class="p-2">164496.7</td>
+                                <td class="p-2">49.31</td>
+                            </tr>
+                            
+                            <tr class="border-b hover:bg-gray-50">
+                                <td class="p-2">5</td>
+                                <td class="p-2">3237</td>
+                                <td class="p-2">7048.98</td>
+                                <td class="p-2">2.18</td>
+                            </tr>
+                            
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Top Problematic Stations -->
+    <section class="mb-10">
+        <h2 class="text-lg font-semibold text-red-700 mb-4">🔧 Top 10 Problematic Stations</h2>
+        <div class="overflow-x-auto bg-white rounded shadow">
+            <table class="min-w-full text-sm text-left">
+                <thead class="bg-red-100 text-red-800">
+                    <tr>
+                        <th class="p-2">Rank</th>
+                        <th class="p-2">Station</th>
+                        <th class="p-2">Line</th>
+                        <th class="p-2">Alarm Count</th>
+                        <th class="p-2">Total Downtime</th>
+                        <th class="p-2">Avg Duration</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    
+                    <tr class="border-b hover:bg-gray-50 bg-red-50">
+                        <td class="p-2">1</td>
+                        <td class="p-2">st08Robot</td>
+                        <td class="p-2">M-Can North</td>
+                        <td class="p-2">150</td>
+                        <td class="p-2">15899.13</td>
+                        <td class="p-2">105.99</td>
+                    </tr>
+                    
+                    <tr class="border-b hover:bg-gray-50 bg-red-50">
+                        <td class="p-2">2</td>
+                        <td class="p-2">St05Scroll</td>
+                        <td class="p-2">M-Can North</td>
+                        <td class="p-2">167</td>
+                        <td class="p-2">14863.35</td>
+                        <td class="p-2">89.0</td>
+                    </tr>
+                    
+                    <tr class="border-b hover:bg-gray-50 bg-red-50">
+                        <td class="p-2">3</td>
+                        <td class="p-2">NBlrAssem</td>
+                        <td class="p-2">M-Can North</td>
+                        <td class="p-2">7</td>
+                        <td class="p-2">13710.64</td>
+                        <td class="p-2">1958.66</td>
+                    </tr>
+                    
+                    <tr class="border-b hover:bg-gray-50 bg-red-50">
+                        <td class="p-2">4</td>
+                        <td class="p-2">St04Test</td>
+                        <td class="p-2">M-Can North</td>
+                        <td class="p-2">269</td>
+                        <td class="p-2">10518.23</td>
+                        <td class="p-2">39.1</td>
+                    </tr>
+                    
+                    <tr class="border-b hover:bg-gray-50 bg-red-50">
+                        <td class="p-2">5</td>
+                        <td class="p-2">ClinchDial</td>
+                        <td class="p-2">M-Can Housing</td>
+                        <td class="p-2">56</td>
+                        <td class="p-2">9848.78</td>
+                        <td class="p-2">175.87</td>
+                    </tr>
+                    
+                    <tr class="border-b hover:bg-gray-50 ">
+                        <td class="p-2">6</td>
+                        <td class="p-2">3Side</td>
+                        <td class="p-2">M-Can Housing</td>
+                        <td class="p-2">84</td>
+                        <td class="p-2">9835.6</td>
+                        <td class="p-2">117.09</td>
+                    </tr>
+                    
+                    <tr class="border-b hover:bg-gray-50 ">
+                        <td class="p-2">7</td>
+                        <td class="p-2">2Side</td>
+                        <td class="p-2">M-Can Housing</td>
+                        <td class="p-2">49</td>
+                        <td class="p-2">9808.89</td>
+                        <td class="p-2">200.18</td>
+                    </tr>
+                    
+                    <tr class="border-b hover:bg-gray-50 ">
+                        <td class="p-2">8</td>
+                        <td class="p-2">Former</td>
+                        <td class="p-2">M-Can Housing</td>
+                        <td class="p-2">43</td>
+                        <td class="p-2">9806.72</td>
+                        <td class="p-2">228.06</td>
+                    </tr>
+                    
+                    <tr class="border-b hover:bg-gray-50 ">
+                        <td class="p-2">9</td>
+                        <td class="p-2">WB16Unload</td>
+                        <td class="p-2">Evolve South</td>
+                        <td class="p-2">1069</td>
+                        <td class="p-2">8266.57</td>
+                        <td class="p-2">7.73</td>
+                    </tr>
+                    
+                    <tr class="border-b hover:bg-gray-50 ">
+                        <td class="p-2">10</td>
+                        <td class="p-2">BlrAssem</td>
+                        <td class="p-2">Evolve South</td>
+                        <td class="p-2">3252</td>
+                        <td class="p-2">7052.59</td>
+                        <td class="p-2">2.17</td>
+                    </tr>
+                    
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <!-- Shift Analysis -->
+    <section class="mb-10">
+        <h2 class="text-lg font-semibold text-blue-700 mb-4">🕒 Shift Analysis</h2>
+        <div class="overflow-x-auto bg-white rounded shadow">
+            <table class="min-w-full text-sm text-left">
+                <thead class="bg-blue-100 text-blue-800">
+                    <tr>
+                        <th class="p-2">Shift</th>
+                        <th class="p-2">Alarm Count</th>
+                        <th class="p-2">Total Duration</th>
+                        <th class="p-2">Avg Duration</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    
+                    <tr class="border-b hover:bg-gray-50">
+                        <td class="p-2">1</td>
+                        <td class="p-2">7747</td>
+                        <td class="p-2">56782.0</td>
+                        <td class="p-2">7.33</td>
+                    </tr>
+                    
+                    <tr class="border-b hover:bg-gray-50">
+                        <td class="p-2">2</td>
+                        <td class="p-2">2307</td>
+                        <td class="p-2">55970.84</td>
+                        <td class="p-2">24.26</td>
+                    </tr>
+                    
+                    <tr class="border-b hover:bg-gray-50">
+                        <td class="p-2">3</td>
+                        <td class="p-2">274</td>
+                        <td class="p-2">82648.37</td>
+                        <td class="p-2">301.64</td>
+                    </tr>
+                    
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+</body>
+</html>
