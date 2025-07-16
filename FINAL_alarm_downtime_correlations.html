@@ -1,0 +1,313 @@
+
+    <!DOCTYPE html>
+    <html>
+    <head>
+        <title>Alarm-Downtime Correlation Report</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+        <style>
+            body { padding: 30px; font-family: sans-serif; }
+            .badge-critical { background-color: #dc3545; }
+            .badge-high { background-color: #fd7e14; }
+            .badge-medium { background-color: #ffc107; color: black; }
+            .badge-strong { background-color: #198754; }
+            .badge-moderate { background-color: #0dcaf0; color: black; }
+            .badge-weak { background-color: #6c757d; }
+        </style>
+    </head>
+    <body>
+        <h2 class="mb-4">🚨 Alarm-Downtime Correlation Report</h2>
+        <table class="table table-bordered table-striped">
+            <thead class="table-dark">
+                <tr>
+                    <th>Line</th>
+                    <th>Alarm</th>
+                    <th>Downtime</th>
+                    <th>SKU</th>
+                    <th>Station</th>
+                    <th>Priority</th>
+                    <th>Total DT (Mins)</th> 
+                    <th>Occurrences</th>
+                </tr>
+            </thead>
+            <tbody>
+                
+                <tr>
+                    <td>AutoHood Assembly</td>
+                    <td>TROUBLE IN TINNERMAN CLIP TRACK</td>
+                    <td>Equipment Failure</td>
+                    <td>413023</td>
+                    <td>St09SMNuts</td>
+                    <td>2</td>
+                    <td>37.0</td>
+                    <td>146</td>
+                </tr>
+                
+                <tr>
+                    <td>AutoHood Assembly</td>
+                    <td>UPC LABEL FELL OFF OF TAMP PAD</td>
+                    <td>Equipment Failure</td>
+                    <td>413023</td>
+                    <td>CtrnLabel</td>
+                    <td>3</td>
+                    <td>37.0</td>
+                    <td>128</td>
+                </tr>
+                
+                <tr>
+                    <td>AutoHood Assembly</td>
+                    <td>NW AREA FAULTED</td>
+                    <td>Equipment Failure</td>
+                    <td>413023</td>
+                    <td>NWBeam</td>
+                    <td>2</td>
+                    <td>37.0</td>
+                    <td>76</td>
+                </tr>
+                
+                <tr>
+                    <td>AutoHood Assembly</td>
+                    <td>TROUBLE IN FILTER CLIP TRACK</td>
+                    <td>Equipment Failure</td>
+                    <td>413023</td>
+                    <td>St04FltClip</td>
+                    <td>2</td>
+                    <td>37.0</td>
+                    <td>84</td>
+                </tr>
+                
+                <tr>
+                    <td>AutoHood Fab</td>
+                    <td>KNOCKOUT WELDER WATCHDOG</td>
+                    <td>Other</td>
+                    <td>1114266</td>
+                    <td>KOAssem</td>
+                    <td>3</td>
+                    <td>29.0</td>
+                    <td>167</td>
+                </tr>
+                
+                <tr>
+                    <td>AutoHood Fab</td>
+                    <td>ENDPANELS LOW</td>
+                    <td>Other</td>
+                    <td>1114266</td>
+                    <td>EPQueues</td>
+                    <td>2</td>
+                    <td>29.0</td>
+                    <td>386</td>
+                </tr>
+                
+                <tr>
+                    <td>AutoHood Fab</td>
+                    <td>KNOCKOUT SUPPLY LOW</td>
+                    <td>Other</td>
+                    <td>1114266</td>
+                    <td>KOAssem</td>
+                    <td>2</td>
+                    <td>29.0</td>
+                    <td>441</td>
+                </tr>
+                
+                <tr>
+                    <td>AutoHood Assembly</td>
+                    <td>NW AREA FAULTED</td>
+                    <td>Equipment Failure</td>
+                    <td>413001L</td>
+                    <td>NWBeam</td>
+                    <td>2</td>
+                    <td>26.0</td>
+                    <td>114</td>
+                </tr>
+                
+                <tr>
+                    <td>AutoHood Assembly</td>
+                    <td>SHIFTER AND PALLET INTERFERE MOLEX PRESS</td>
+                    <td>Equipment Failure</td>
+                    <td>413001L</td>
+                    <td>PinCrimp</td>
+                    <td>3</td>
+                    <td>26.0</td>
+                    <td>186</td>
+                </tr>
+                
+                <tr>
+                    <td>AutoHood Assembly</td>
+                    <td>NAMEPLATE NOT POSITIONED HORIZONTALLY</td>
+                    <td>Equipment Failure</td>
+                    <td>413001L</td>
+                    <td>St07Nameplate</td>
+                    <td>3</td>
+                    <td>26.0</td>
+                    <td>104</td>
+                </tr>
+                
+                <tr>
+                    <td>AutoHood Assembly</td>
+                    <td>SHIFTER AND PALLET INTERFERE MOLEX PRESS</td>
+                    <td>Equipment Failure</td>
+                    <td>BUF403WW</td>
+                    <td>PinCrimp</td>
+                    <td>3</td>
+                    <td>26.0</td>
+                    <td>93</td>
+                </tr>
+                
+                <tr>
+                    <td>Evolve South</td>
+                    <td>Station #16 Good Part Conv. Not Clear</td>
+                    <td>Material Shortage</td>
+                    <td>PTE511RK</td>
+                    <td>WB16Unload</td>
+                    <td>1</td>
+                    <td>20.0</td>
+                    <td>306</td>
+                </tr>
+                
+                <tr>
+                    <td>M-Can North</td>
+                    <td>ALM0768 - STA07 Spec Label Printer Not Ready Fault</td>
+                    <td>Equipment Failure</td>
+                    <td>AE80BF1</td>
+                    <td>St07Label</td>
+                    <td>3</td>
+                    <td>11.0</td>
+                    <td>177</td>
+                </tr>
+                
+                <tr>
+                    <td>M-Can North</td>
+                    <td>ALM0548 - STA05 Scroll not Snapped Into Bracket Ov...</td>
+                    <td>Equipment Failure</td>
+                    <td>AE80BF1</td>
+                    <td>St05Scroll</td>
+                    <td>3</td>
+                    <td>11.0</td>
+                    <td>503</td>
+                </tr>
+                
+                <tr>
+                    <td>M-Can North</td>
+                    <td>ALM0410 - STA04 RPM Fault</td>
+                    <td>Equipment Failure</td>
+                    <td>AE80BF1</td>
+                    <td>St04Test</td>
+                    <td>3</td>
+                    <td>11.0</td>
+                    <td>235</td>
+                </tr>
+                
+                <tr>
+                    <td>M-Can North</td>
+                    <td>ALM0701 - STA07 Zone Stopped</td>
+                    <td>Equipment Failure</td>
+                    <td>AE80BF1</td>
+                    <td>St07Label</td>
+                    <td>3</td>
+                    <td>11.0</td>
+                    <td>238</td>
+                </tr>
+                
+                <tr>
+                    <td>M-Can North</td>
+                    <td>ALM0860 - STA08 Robot Fault</td>
+                    <td>Equipment Failure</td>
+                    <td>AE80BF1</td>
+                    <td>st08Robot</td>
+                    <td>3</td>
+                    <td>11.0</td>
+                    <td>300</td>
+                </tr>
+                
+                <tr>
+                    <td>M-Can North</td>
+                    <td>ALM0732 - STA07 Station A Spec Label Printer Fault</td>
+                    <td>Equipment Failure</td>
+                    <td>AE80BF1</td>
+                    <td>St07Label</td>
+                    <td>3</td>
+                    <td>11.0</td>
+                    <td>177</td>
+                </tr>
+                
+                <tr>
+                    <td>M-Can North</td>
+                    <td>ALM0201 - STA02 Zone Stopped</td>
+                    <td>Equipment Failure</td>
+                    <td>AE80BF1</td>
+                    <td>St02MtrNut</td>
+                    <td>3</td>
+                    <td>11.0</td>
+                    <td>170</td>
+                </tr>
+                
+                <tr>
+                    <td>M-Can North</td>
+                    <td>ALM0401 - STA04 Zone Stopped</td>
+                    <td>Equipment Failure</td>
+                    <td>AE80BF1</td>
+                    <td>St04Test</td>
+                    <td>3</td>
+                    <td>11.0</td>
+                    <td>175</td>
+                </tr>
+                
+                <tr>
+                    <td>M-Can North</td>
+                    <td>ALM0435 - STA04 Continuity Probe Raise Overtime</td>
+                    <td>Equipment Failure</td>
+                    <td>AE80BF1</td>
+                    <td>St04Test</td>
+                    <td>3</td>
+                    <td>11.0</td>
+                    <td>175</td>
+                </tr>
+                
+                <tr>
+                    <td>AutoHood Assembly</td>
+                    <td>SHIFTER AND PALLET INTERFERE MOLEX PRESS</td>
+                    <td>Equipment Failure</td>
+                    <td>4130SF</td>
+                    <td>PinCrimp</td>
+                    <td>3</td>
+                    <td>10.0</td>
+                    <td>93</td>
+                </tr>
+                
+                <tr>
+                    <td>M-Can North</td>
+                    <td>ALM0857 - STA08 Robot E-Stop (Either Pendant or Fr...</td>
+                    <td>Equipment Failure</td>
+                    <td>AE80BF1</td>
+                    <td>st08Robot</td>
+                    <td>3</td>
+                    <td>8.0</td>
+                    <td>217</td>
+                </tr>
+                
+                <tr>
+                    <td>AutoHood Fab</td>
+                    <td>KNOCKOUT SUPPLY LOW</td>
+                    <td>Other</td>
+                    <td>413001L</td>
+                    <td>KOAssem</td>
+                    <td>2</td>
+                    <td>6.0</td>
+                    <td>128</td>
+                </tr>
+                
+                <tr>
+                    <td>AutoHood Fab</td>
+                    <td>ENDPANELS LOW</td>
+                    <td>Other</td>
+                    <td>413001L</td>
+                    <td>EPQueues</td>
+                    <td>2</td>
+                    <td>6.0</td>
+                    <td>120</td>
+                </tr>
+                
+            </tbody>
+        </table>
+    </body>
+    </html>
+    
