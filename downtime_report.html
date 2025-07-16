@@ -1,0 +1,1053 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Downtime Report</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 text-gray-800 px-6 py-8">
+
+    <h1 class="text-3xl font-bold text-blue-800 mb-6">📊 BROAN Downtime Report</h1>
+
+    <!-- Executive Summary -->
+    <div class="bg-white shadow rounded-lg p-6 mb-8">
+        <h2 class="text-xl font-semibold text-blue-700 mb-2">Executive Summary</h2>
+        <p><strong>Total Downtime:</strong> 2111.6 min (35.2 hrs)</p>
+        <p><strong>Average Downtime per Event:</strong> 17.3 min</p>
+    </div>
+
+    <!-- Charts -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+        <div>
+            <h2 class="text-lg font-semibold text-blue-700 mb-2">Pareto - Downtime Descriptions</h2>
+            <img src="1_pareto_downtime_descriptions.png" class="w-full rounded shadow border border-gray-300">
+        </div>
+        <div>
+            <h2 class="text-lg font-semibold text-blue-700 mb-2">Pareto - Production Lines</h2>
+            <img src="2_pareto_line_downtime.png" class="w-full rounded shadow border border-gray-300">
+        </div>
+    </div>
+
+    <!-- Shift-wise Downtime Summary -->
+    <div class="mb-8">
+        <h2 class="text-lg font-semibold text-blue-700 mb-4">Shift-wise Downtime Summary</h2>
+        <div class="overflow-x-auto">
+            <table class="min-w-full bg-white shadow rounded-lg">
+                <thead class="bg-blue-800 text-white">
+                    <tr>
+                        <th class="p-3 text-left">Shift</th>
+                        <th class="p-3 text-left">Total Minutes</th>
+                        <th class="p-3 text-left">Events</th>
+                        <th class="p-3 text-left">Avg Duration (min)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    
+                    <tr class="border-b hover:bg-gray-50">
+                        <td class="p-3">1</td>
+                        <td class="p-3">1357.0</td>
+                        <td class="p-3">60</td>
+                        <td class="p-3">22.6</td>
+                    </tr>
+                    
+                    <tr class="border-b hover:bg-gray-50">
+                        <td class="p-3">2</td>
+                        <td class="p-3">754.6</td>
+                        <td class="p-3">62</td>
+                        <td class="p-3">12.2</td>
+                    </tr>
+                    
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- Data Tables -->
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-8">
+        
+        
+        <div class="bg-white shadow rounded-lg p-4">
+            <h2 class="text-lg font-semibold text-blue-700 mb-4">Top Downtime Descriptions</h2>
+            <div class="overflow-x-auto">
+                <table class="min-w-full text-sm">
+                    <thead class="bg-blue-100 text-blue-800">
+                        <tr>
+                            
+                            <th class="p-2 text-left">DT Desc</th>
+                            
+                            <th class="p-2 text-left">Total Minutes</th>
+                            
+                            <th class="p-2 text-left">Event Count</th>
+                            
+                            <th class="p-2 text-left">Percentage of Total</th>
+                            
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr class="border-b hover:bg-gray-50">
+                            
+                            <td class="p-2">
+                                
+                                    Equipment Failure
+                                
+                            </td>
+                            
+                            <td class="p-2">
+                                
+                                    864.1
+                                
+                            </td>
+                            
+                            <td class="p-2">
+                                
+                                    49
+                                
+                            </td>
+                            
+                            <td class="p-2">
+                                
+                                    40.9%
+                                
+                            </td>
+                            
+                        </tr>
+                        
+                        <tr class="border-b hover:bg-gray-50">
+                            
+                            <td class="p-2">
+                                
+                                    Quality
+                                
+                            </td>
+                            
+                            <td class="p-2">
+                                
+                                    345.0
+                                
+                            </td>
+                            
+                            <td class="p-2">
+                                
+                                    12
+                                
+                            </td>
+                            
+                            <td class="p-2">
+                                
+                                    16.3%
+                                
+                            </td>
+                            
+                        </tr>
+                        
+                        <tr class="border-b hover:bg-gray-50">
+                            
+                            <td class="p-2">
+                                
+                                    Staffing
+                                
+                            </td>
+                            
+                            <td class="p-2">
+                                
+                                    303.5
+                                
+                            </td>
+                            
+                            <td class="p-2">
+                                
+                                    21
+                                
+                            </td>
+                            
+                            <td class="p-2">
+                                
+                                    14.4%
+                                
+                            </td>
+                            
+                        </tr>
+                        
+                        <tr class="border-b hover:bg-gray-50">
+                            
+                            <td class="p-2">
+                                
+                                    Other
+                                
+                            </td>
+                            
+                            <td class="p-2">
+                                
+                                    231.0
+                                
+                            </td>
+                            
+                            <td class="p-2">
+                                
+                                    13
+                                
+                            </td>
+                            
+                            <td class="p-2">
+                                
+                                    10.9%
+                                
+                            </td>
+                            
+                        </tr>
+                        
+                        <tr class="border-b hover:bg-gray-50">
+                            
+                            <td class="p-2">
+                                
+                                    Material Shortage
+                                
+                            </td>
+                            
+                            <td class="p-2">
+                                
+                                    170.0
+                                
+                            </td>
+                            
+                            <td class="p-2">
+                                
+                                    7
+                                
+                            </td>
+                            
+                            <td class="p-2">
+                                
+                                    8.1%
+                                
+                            </td>
+                            
+                        </tr>
+                        
+                        <tr class="border-b hover:bg-gray-50">
+                            
+                            <td class="p-2">
+                                
+                                    Meeting/Training
+                                
+                            </td>
+                            
+                            <td class="p-2">
+                                
+                                    158.3
+                                
+                            </td>
+                            
+                            <td class="p-2">
+                                
+                                    16
+                                
+                            </td>
+                            
+                            <td class="p-2">
+                                
+                                    7.5%
+                                
+                            </td>
+                            
+                        </tr>
+                        
+                        <tr class="border-b hover:bg-gray-50">
+                            
+                            <td class="p-2">
+                                
+                                    Setup/Changeover
+                                
+                            </td>
+                            
+                            <td class="p-2">
+                                
+                                    39.7
+                                
+                            </td>
+                            
+                            <td class="p-2">
+                                
+                                    4
+                                
+                            </td>
+                            
+                            <td class="p-2">
+                                
+                                    1.9%
+                                
+                            </td>
+                            
+                        </tr>
+                        
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        
+        <div class="bg-white shadow rounded-lg p-4">
+            <h2 class="text-lg font-semibold text-blue-700 mb-4">Top SKUs by Downtime</h2>
+            <div class="overflow-x-auto">
+                <table class="min-w-full text-sm">
+                    <thead class="bg-blue-100 text-blue-800">
+                        <tr>
+                            
+                            <th class="p-2 text-left">SKU</th>
+                            
+                            <th class="p-2 text-left">Total Minutes</th>
+                            
+                            <th class="p-2 text-left">Event Count</th>
+                            
+                            <th class="p-2 text-left">Avg Duration</th>
+                            
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr class="border-b hover:bg-gray-50">
+                            
+                            <td class="p-2">
+                                
+                                    AE80BF1
+                                
+                            </td>
+                            
+                            <td class="p-2">
+                                
+                                    257.6
+                                
+                            </td>
+                            
+                            <td class="p-2">
+                                
+                                    30
+                                
+                            </td>
+                            
+                            <td class="p-2">
+                                
+                                    8.6
+                                
+                            </td>
+                            
+                        </tr>
+                        
+                        <tr class="border-b hover:bg-gray-50">
+                            
+                            <td class="p-2">
+                                
+                                    696NE
+                                
+                            </td>
+                            
+                            <td class="p-2">
+                                
+                                    255.0
+                                
+                            </td>
+                            
+                            <td class="p-2">
+                                
+                                    19
+                                
+                            </td>
+                            
+                            <td class="p-2">
+                                
+                                    13.4
+                                
+                            </td>
+                            
+                        </tr>
+                        
+                        <tr class="border-b hover:bg-gray-50">
+                            
+                            <td class="p-2">
+                                
+                                    688ES
+                                
+                            </td>
+                            
+                            <td class="p-2">
+                                
+                                    255.0
+                                
+                            </td>
+                            
+                            <td class="p-2">
+                                
+                                    10
+                                
+                            </td>
+                            
+                            <td class="p-2">
+                                
+                                    25.5
+                                
+                            </td>
+                            
+                        </tr>
+                        
+                        <tr class="border-b hover:bg-gray-50">
+                            
+                            <td class="p-2">
+                                
+                                    6884EH
+                                
+                            </td>
+                            
+                            <td class="p-2">
+                                
+                                    242.0
+                                
+                            </td>
+                            
+                            <td class="p-2">
+                                
+                                    14
+                                
+                            </td>
+                            
+                            <td class="p-2">
+                                
+                                    17.3
+                                
+                            </td>
+                            
+                        </tr>
+                        
+                        <tr class="border-b hover:bg-gray-50">
+                            
+                            <td class="p-2">
+                                
+                                    1114266
+                                
+                            </td>
+                            
+                            <td class="p-2">
+                                
+                                    207.0
+                                
+                            </td>
+                            
+                            <td class="p-2">
+                                
+                                    11
+                                
+                            </td>
+                            
+                            <td class="p-2">
+                                
+                                    18.8
+                                
+                            </td>
+                            
+                        </tr>
+                        
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        
+        <div class="bg-white shadow rounded-lg p-4">
+            <h2 class="text-lg font-semibold text-blue-700 mb-4">Top Comments</h2>
+            <div class="overflow-x-auto">
+                <table class="min-w-full text-sm">
+                    <thead class="bg-blue-100 text-blue-800">
+                        <tr>
+                            
+                            <th class="p-2 text-left">Comments</th>
+                            
+                            <th class="p-2 text-left">Total Minutes</th>
+                            
+                            <th class="p-2 text-left">Event Count</th>
+                            
+                            <th class="p-2 text-left">Avg Duration</th>
+                            
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr class="border-b hover:bg-gray-50">
+                            
+                            <td class="p-2">
+                                
+                                    Rework
+                                
+                            </td>
+                            
+                            <td class="p-2">
+                                
+                                    135.0
+                                
+                            </td>
+                            
+                            <td class="p-2">
+                                
+                                    3
+                                
+                            </td>
+                            
+                            <td class="p-2">
+                                
+                                    45.0
+                                
+                            </td>
+                            
+                        </tr>
+                        
+                        <tr class="border-b hover:bg-gray-50">
+                            
+                            <td class="p-2">
+                                
+                                    Ran out of 99351861 foam filler
+                                
+                            </td>
+                            
+                            <td class="p-2">
+                                
+                                    120.0
+                                
+                            </td>
+                            
+                            <td class="p-2">
+                                
+                                    2
+                                
+                            </td>
+                            
+                            <td class="p-2">
+                                
+                                    60.0
+                                
+                            </td>
+                            
+                        </tr>
+                        
+                        <tr class="border-b hover:bg-gray-50">
+                            
+                            <td class="p-2">
+                                
+                                    New employee.
+                                
+                            </td>
+                            
+                            <td class="p-2">
+                                
+                                    110.0
+                                
+                            </td>
+                            
+                            <td class="p-2">
+                                
+                                    7
+                                
+                            </td>
+                            
+                            <td class="p-2">
+                                
+                                    15.7
+                                
+                            </td>
+                            
+                        </tr>
+                        
+                        <tr class="border-b hover:bg-gray-50">
+                            
+                            <td class="p-2">
+                                
+                                    scroll band not running well in stitcher
+                                
+                            </td>
+                            
+                            <td class="p-2">
+                                
+                                    85.0
+                                
+                            </td>
+                            
+                            <td class="p-2">
+                                
+                                    5
+                                
+                            </td>
+                            
+                            <td class="p-2">
+                                
+                                    17.0
+                                
+                            </td>
+                            
+                        </tr>
+                        
+                        <tr class="border-b hover:bg-gray-50">
+                            
+                            <td class="p-2">
+                                
+                                    spec label
+                                
+                            </td>
+                            
+                            <td class="p-2">
+                                
+                                    60.0
+                                
+                            </td>
+                            
+                            <td class="p-2">
+                                
+                                    1
+                                
+                            </td>
+                            
+                            <td class="p-2">
+                                
+                                    60.0
+                                
+                            </td>
+                            
+                        </tr>
+                        
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        
+        <div class="bg-white shadow rounded-lg p-4">
+            <h2 class="text-lg font-semibold text-blue-700 mb-4">Production Lines</h2>
+            <div class="overflow-x-auto">
+                <table class="min-w-full text-sm">
+                    <thead class="bg-blue-100 text-blue-800">
+                        <tr>
+                            
+                            <th class="p-2 text-left">Line</th>
+                            
+                            <th class="p-2 text-left">Total Minutes</th>
+                            
+                            <th class="p-2 text-left">Event Count</th>
+                            
+                            <th class="p-2 text-left">Avg Duration</th>
+                            
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr class="border-b hover:bg-gray-50">
+                            
+                            <td class="p-2">
+                                
+                                    D-Can East
+                                
+                            </td>
+                            
+                            <td class="p-2">
+                                
+                                    580.0
+                                
+                            </td>
+                            
+                            <td class="p-2">
+                                
+                                    34
+                                
+                            </td>
+                            
+                            <td class="p-2">
+                                
+                                    17.1
+                                
+                            </td>
+                            
+                        </tr>
+                        
+                        <tr class="border-b hover:bg-gray-50">
+                            
+                            <td class="p-2">
+                                
+                                    AutoHood Assembly
+                                
+                            </td>
+                            
+                            <td class="p-2">
+                                
+                                    458.0
+                                
+                            </td>
+                            
+                            <td class="p-2">
+                                
+                                    21
+                                
+                            </td>
+                            
+                            <td class="p-2">
+                                
+                                    21.8
+                                
+                            </td>
+                            
+                        </tr>
+                        
+                        <tr class="border-b hover:bg-gray-50">
+                            
+                            <td class="p-2">
+                                
+                                    M-Can North
+                                
+                            </td>
+                            
+                            <td class="p-2">
+                                
+                                    257.6
+                                
+                            </td>
+                            
+                            <td class="p-2">
+                                
+                                    30
+                                
+                            </td>
+                            
+                            <td class="p-2">
+                                
+                                    8.6
+                                
+                            </td>
+                            
+                        </tr>
+                        
+                        <tr class="border-b hover:bg-gray-50">
+                            
+                            <td class="p-2">
+                                
+                                    D-Can West
+                                
+                            </td>
+                            
+                            <td class="p-2">
+                                
+                                    237.0
+                                
+                            </td>
+                            
+                            <td class="p-2">
+                                
+                                    14
+                                
+                            </td>
+                            
+                            <td class="p-2">
+                                
+                                    16.9
+                                
+                            </td>
+                            
+                        </tr>
+                        
+                        <tr class="border-b hover:bg-gray-50">
+                            
+                            <td class="p-2">
+                                
+                                    AutoHood Fab
+                                
+                            </td>
+                            
+                            <td class="p-2">
+                                
+                                    220.0
+                                
+                            </td>
+                            
+                            <td class="p-2">
+                                
+                                    13
+                                
+                            </td>
+                            
+                            <td class="p-2">
+                                
+                                    16.9
+                                
+                            </td>
+                            
+                        </tr>
+                        
+                        <tr class="border-b hover:bg-gray-50">
+                            
+                            <td class="p-2">
+                                
+                                    Wolf Pro Liner
+                                
+                            </td>
+                            
+                            <td class="p-2">
+                                
+                                    205.0
+                                
+                            </td>
+                            
+                            <td class="p-2">
+                                
+                                    5
+                                
+                            </td>
+                            
+                            <td class="p-2">
+                                
+                                    41.0
+                                
+                            </td>
+                            
+                        </tr>
+                        
+                        <tr class="border-b hover:bg-gray-50">
+                            
+                            <td class="p-2">
+                                
+                                    Losone
+                                
+                            </td>
+                            
+                            <td class="p-2">
+                                
+                                    120.0
+                                
+                            </td>
+                            
+                            <td class="p-2">
+                                
+                                    2
+                                
+                            </td>
+                            
+                            <td class="p-2">
+                                
+                                    60.0
+                                
+                            </td>
+                            
+                        </tr>
+                        
+                        <tr class="border-b hover:bg-gray-50">
+                            
+                            <td class="p-2">
+                                
+                                    Evolve South
+                                
+                            </td>
+                            
+                            <td class="p-2">
+                                
+                                    20.0
+                                
+                            </td>
+                            
+                            <td class="p-2">
+                                
+                                    1
+                                
+                            </td>
+                            
+                            <td class="p-2">
+                                
+                                    20.0
+                                
+                            </td>
+                            
+                        </tr>
+                        
+                        <tr class="border-b hover:bg-gray-50">
+                            
+                            <td class="p-2">
+                                
+                                    M-Can South
+                                
+                            </td>
+                            
+                            <td class="p-2">
+                                
+                                    14.0
+                                
+                            </td>
+                            
+                            <td class="p-2">
+                                
+                                    2
+                                
+                            </td>
+                            
+                            <td class="p-2">
+                                
+                                    7.0
+                                
+                            </td>
+                            
+                        </tr>
+                        
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        
+    </div>
+
+    <!-- Combined Analysis -->
+    <div class="bg-white shadow rounded-lg p-6 mb-8">
+        <h2 class="text-lg font-semibold text-blue-700 mb-4">Combined Analysis: SKU, Line & Comments</h2>
+        <div class="overflow-x-auto">
+            <table class="min-w-full text-sm">
+                <thead class="bg-blue-100 text-blue-800">
+                    <tr>
+                        <th class="p-2 text-left">SKU</th>
+                        <th class="p-2 text-left">Line</th>
+                        <th class="p-2 text-left">Comment</th>
+                        <th class="p-2 text-left">Total Minutes</th>
+                        <th class="p-2 text-left">Events</th>
+                        <th class="p-2 text-left">Avg Duration (min)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    
+                    <tr class="border-b hover:bg-gray-50">
+                        <td class="p-2">PL341912</td>
+                        <td class="p-2">Wolf Pro Liner</td>
+                        <td class="p-2">Rework</td>
+                        <td class="p-2">135.0</td>
+                        <td class="p-2">3</td>
+                        <td class="p-2">45.0</td>
+                    </tr>
+                    
+                    <tr class="border-b hover:bg-gray-50">
+                        <td class="p-2">L200E</td>
+                        <td class="p-2">Losone</td>
+                        <td class="p-2">Ran out of 99351861 foam filler</td>
+                        <td class="p-2">120.0</td>
+                        <td class="p-2">2</td>
+                        <td class="p-2">60.0</td>
+                    </tr>
+                    
+                    <tr class="border-b hover:bg-gray-50">
+                        <td class="p-2">6884EH</td>
+                        <td class="p-2">D-Can West</td>
+                        <td class="p-2">scroll band not running well in stitcher</td>
+                        <td class="p-2">85.0</td>
+                        <td class="p-2">5</td>
+                        <td class="p-2">17.0</td>
+                    </tr>
+                    
+                    <tr class="border-b hover:bg-gray-50">
+                        <td class="p-2">688ES</td>
+                        <td class="p-2">D-Can East</td>
+                        <td class="p-2">New employee.</td>
+                        <td class="p-2">60.0</td>
+                        <td class="p-2">3</td>
+                        <td class="p-2">20.0</td>
+                    </tr>
+                    
+                    <tr class="border-b hover:bg-gray-50">
+                        <td class="p-2">413001</td>
+                        <td class="p-2">AutoHood Assembly</td>
+                        <td class="p-2">wire hardness</td>
+                        <td class="p-2">60.0</td>
+                        <td class="p-2">1</td>
+                        <td class="p-2">60.0</td>
+                    </tr>
+                    
+                    <tr class="border-b hover:bg-gray-50">
+                        <td class="p-2">PL461912</td>
+                        <td class="p-2">Wolf Pro Liner</td>
+                        <td class="p-2">parts issue</td>
+                        <td class="p-2">60.0</td>
+                        <td class="p-2">1</td>
+                        <td class="p-2">60.0</td>
+                    </tr>
+                    
+                    <tr class="border-b hover:bg-gray-50">
+                        <td class="p-2">F4024SF</td>
+                        <td class="p-2">AutoHood Assembly</td>
+                        <td class="p-2">spec label</td>
+                        <td class="p-2">60.0</td>
+                        <td class="p-2">1</td>
+                        <td class="p-2">60.0</td>
+                    </tr>
+                    
+                    <tr class="border-b hover:bg-gray-50">
+                        <td class="p-2">688ES</td>
+                        <td class="p-2">D-Can East</td>
+                        <td class="p-2">college help struggled on pigtails</td>
+                        <td class="p-2">60.0</td>
+                        <td class="p-2">1</td>
+                        <td class="p-2">60.0</td>
+                    </tr>
+                    
+                    <tr class="border-b hover:bg-gray-50">
+                        <td class="p-2">696NE</td>
+                        <td class="p-2">D-Can East</td>
+                        <td class="p-2">New employee.</td>
+                        <td class="p-2">50.0</td>
+                        <td class="p-2">4</td>
+                        <td class="p-2">12.5</td>
+                    </tr>
+                    
+                    <tr class="border-b hover:bg-gray-50">
+                        <td class="p-2">688ES</td>
+                        <td class="p-2">D-Can East</td>
+                        <td class="p-2">Housing conveyor down.</td>
+                        <td class="p-2">45.0</td>
+                        <td class="p-2">2</td>
+                        <td class="p-2">22.5</td>
+                    </tr>
+                    
+                    <tr class="border-b hover:bg-gray-50">
+                        <td class="p-2">688ES</td>
+                        <td class="p-2">D-Can East</td>
+                        <td class="p-2">Housing conveyor motor down.</td>
+                        <td class="p-2">40.0</td>
+                        <td class="p-2">1</td>
+                        <td class="p-2">40.0</td>
+                    </tr>
+                    
+                    <tr class="border-b hover:bg-gray-50">
+                        <td class="p-2">6884EH</td>
+                        <td class="p-2">D-Can West</td>
+                        <td class="p-2">trying to get rejected scroll band to run</td>
+                        <td class="p-2">40.0</td>
+                        <td class="p-2">1</td>
+                        <td class="p-2">40.0</td>
+                    </tr>
+                    
+                    <tr class="border-b hover:bg-gray-50">
+                        <td class="p-2">696NE</td>
+                        <td class="p-2">D-Can East</td>
+                        <td class="p-2">Speed loss/new employee.</td>
+                        <td class="p-2">40.0</td>
+                        <td class="p-2">3</td>
+                        <td class="p-2">13.3</td>
+                    </tr>
+                    
+                    <tr class="border-b hover:bg-gray-50">
+                        <td class="p-2">413023</td>
+                        <td class="p-2">AutoHood Assembly</td>
+                        <td class="p-2">West pallet transfer keeps crashing on top of pallets. Wire harness track broke. Maintenance working on both </td>
+                        <td class="p-2">37.0</td>
+                        <td class="p-2">1</td>
+                        <td class="p-2">37.0</td>
+                    </tr>
+                    
+                    <tr class="border-b hover:bg-gray-50">
+                        <td class="p-2">413001</td>
+                        <td class="p-2">AutoHood Assembly</td>
+                        <td class="p-2">training</td>
+                        <td class="p-2">35.0</td>
+                        <td class="p-2">2</td>
+                        <td class="p-2">17.5</td>
+                    </tr>
+                    
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+</body>
+</html>
